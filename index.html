@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="plugin/owlcarousel/owl.carousel.min.css" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Zoomer</title>
+
+    <style>
+
+        ul, ol, li {
+            list-style: none;
+        }
+
+        .item .name {
+            text-align: center;
+            padding-top: 5px;
+            color: #c25f5f;
+        }
+
+        .image {
+            height: 200px;
+        }
+
+        img {
+            height: 100%;
+            border: 1px solid black;
+        }
+
+        .product-list {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        h2 {
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        .span {
+            color: #58d1ca;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section-2 {
+            margin-top: 30px;
+        }
+
+        .section-3 {
+            margin-bottom: 50px;
+        }
+
+        .image-inner img {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .product-images-block {
+            width: 300px;
+            margin: 0 auto;
+            padding-top: 10px;
+        }
+
+        .product-images-block a {
+            display: inline-block;
+        }
+
+        .product-images-block img {
+            display: block;
+            width: 100px;
+            height: 100px;
+        }
+
+        .current {
+            border: 2px solid red;
+        }
+
+        .owl-carousel .owl-nav {
+            box-sizing: border-box;
+            display: flex;
+            height: 0;
+            justify-content: space-between;
+            max-width: 1600px;
+            padding: 0 10px;
+            position: absolute;
+            top: calc(50% - 21px);
+            width: 100%;
+        }
+
+        .owl-carousel .owl-nav button {
+            background: #000 url(img/section-3/slider-arrows.png) no-repeat -15px -14px !important;
+            height: 42px;
+            opacity: .25;
+            transition: all .3s ease-in-out 0s;
+            width: 42px;
+        }
+
+        .owl-carousel .owl-nav button.owl-prev {
+            border-radius: 0 2px 2px 0;
+        }
+
+        .owl-carousel .owl-nav button.owl-next {
+            background-position: -79px -14px !important;
+            border-radius: 2px 0 0 2px;
+        }
+
+        .wrapper {
+            margin: 0 auto;
+            max-width: 95%;
+        }
+
+        .owl-carousel img {
+            border: none !important;
+            mix-blend-mode: multiply;
+            width: auto !important;
+            margin: 0 auto;
+        }
+
+        .owl-carousel .item {
+            height: 400px;
+            background: #f4f4f4;
+            padding: 1rem;
+        }
+
+        .owl-carousel .owl-nav.disabled {
+            display: flex;
+        }
+
+        .product-slide img {
+            transition: transform .3s ease-in-out 0s;
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+<div class="section-1">
+    <h2>Section - 1 (innerZoom)</h2>
+    <div class="span">'.item .image img'</div>
+    <ul class="product-list">
+        <li class="item">
+            <div class="image">
+                <img src="img/section-1/50c1661b27b4c188275285742f4718cf.jpg">
+            </div>
+            <div class="name">the first</div>
+        </li>
+        <li class="item">
+            <div class="image image-2">
+                <img src="img/section-1/8c11eeb04a76b5a60c974e81375180c0.jpg">
+            </div>
+            <div class="name">the second</div>
+        </li>
+        <li class="item">
+            <div class="image image-3">
+                <img src="img/section-1/0603c549ca90ed06872c17d20ab0e015.jpg">
+            </div>
+            <div class="name">the third</div>
+        </li>
+    </ul>
+</div>
+
+<div class="section-2">
+    <h2>Section - 2 (Gallery)</h2>
+    <div class="span">'.main-image .image-inner img'</div>
+    <div class="main-image">
+        <div class="image-inner">
+            <img alt="" src="img/section-2/8c3c6aa8e82cc8ccaa2e2d0ca0ab0dc2.jpg">
+        </div>
+    </div>
+    <div class="product-images-block">
+        <a class="ul-prod-img current" data-image="img/section-2/8c3c6aa8e82cc8ccaa2e2d0ca0ab0dc2.jpg">
+            <img alt="" src="img/section-2/8c3c6aa8e82cc8ccaa2e2d0ca0ab0dc2.jpg">
+        </a>
+        <a class="ul-prod-img" data-image="img/section-1/8c11eeb04a76b5a60c974e81375180c0.jpg">
+            <img alt="" src="img/section-1/8c11eeb04a76b5a60c974e81375180c0.jpg">
+        </a>
+    </div>
+</div>
+
+<
+<div class="section-3">
+    <h2>Section - 3 (Carousel)</h2>
+    <div class="wrapper">
+
+        <div class="span">'.product-slide .owl-carousel img'</div>
+        <div class="product-slide">
+            <div class="owl-carousel owl-theme">
+
+                <div class="item">
+                    <a href="" class="image">
+                        <img alt="" src="img/section-3/4fec5a8c526ecdd046e54533df641249.jpg">
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="" class="image">
+                        <img alt="" src="img/section-3/a1ef05b2f854b791f8d32d40d526da4a.jpg">
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="" class="image">
+                        <img alt="" src="img/section-3/bc122f97ae29a3567df9ed3f94a8bb4b.jpg">
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="" class="image">
+                        <img alt="" src="img/section-3/a1ef05b2f854b791f8d32d40d526da4a.jpg">
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="" class="image">
+                        <img alt="" src="img/section-3/4fec5a8c526ecdd046e54533df641249.jpg">
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="" class="image">
+                        <img alt="" src="img/section-3/a1ef05b2f854b791f8d32d40d526da4a.jpg">
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="" class="image">
+                        <img alt="" src="img/section-3/bc122f97ae29a3567df9ed3f94a8bb4b.jpg">
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="" class="image">
+                        <img alt="" src="img/section-3/a1ef05b2f854b791f8d32d40d526da4a.jpg">
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="plugin/jquery.ez-plus.js"></script>
+<script src="plugin/owlcarousel/owl.carousel.min.js"></script>
+
+<script src="app.zoom.js"></script>
+</body>
+</html>
